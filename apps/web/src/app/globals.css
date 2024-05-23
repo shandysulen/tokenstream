@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* COLORS */
+    /* https://tailwindcss.com/docs/customizing-colors#default-color-palette */
+    --background: 0 0% 100%; /* white */
+    --foreground: 0, 0%, 9%; /* off-black; neutral.900; #171717 */
+    --border: 214.3 31.8% 91.4%; /* light gray */
+    --brand: 292 84% 61%; /** brand color fuschia.500; #d946ef **/
+    --brand-accent: 292, 86%, 45%; /** brand color fuschia.500; #d946ef **/
+    --primary: 222.2 47.4% 11.2%; /* button bg; off-black */
+    --primary-foreground: 0 0% 100%; /* button fg; white */
+    --accent: 210 40% 96.1%; /* icon button bg hover; light gray */
+    --accent-foreground: 222.2 47.4% 11.2%; /* icon button bg hover color; off-white */
+    --muted: 220, 9%, 46%; /* table header text color; subtitle; light gray; gray.500 #6b7280 */
+
+    /* HEIGHT */
+    --height-footer: 40px;
+    --height-header: 72px;
+    --height-ticker: 48px;
+  }
+  :root.dark {
+    --background: 0 0% 0%; /* black */
+    --border: 30, 6%, 25%; /* dark gray; stone.700 */
+    --primary: 0 0% 25%; /* button bg; gray neutral.700 */
+    --muted: 218, 11%, 65%; /* light gray; gray.400 */
+  }
+}
+
+@layer utilities {
+  .animation-paused {
+    animation-play-state: paused;
+  }
+
+  .background-blur {
+    @apply bg-background/70 backdrop-blur-3xl;
+  }
+
+  .dark .background-blur {
+    @apply bg-background/70 backdrop-blur-3xl;
+  }
+}
+
+*::selection {
+  background-color: hsl(var(--brand));
+  color: var(--primary);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  width: 0px;
+  background-color: white;
+  transition: 1s all;
+}
+
+#sidebar:hover::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+/* LOADING BAR */
+#nprogress {
+  height: 100%;
+}
+
+#nprogress .bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--brand), var(--brand-accent));
+  box-shadow: 0px 0px 5px 1px var(--brand);
+}
+
+#loading-bar {
+  height: 5px;
+}
+
+/* LUCIDE */
+.lucide {
+  width: 20px;
+  height: 20px;
+}

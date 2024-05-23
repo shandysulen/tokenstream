@@ -1,0 +1,26 @@
+{
+  "sortedMiddleware": [],
+  "middleware": {},
+  "functions": {
+    "/api/trpc/[trpc]/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/trpc/[trpc]/route.js"
+      ],
+      "name": "app/api/trpc/[trpc]/route",
+      "page": "/api/trpc/[trpc]/route",
+      "matchers": [
+        {
+          "regexp": "^/api/trpc/(?<trpc>[^/]+?)$",
+          "originalSource": "/api/trpc/[trpc]"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    }
+  },
+  "version": 2
+}

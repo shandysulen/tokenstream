@@ -1,0 +1,28 @@
+{
+  "name": "@tokenstream/db",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Db tables/schemas for the Tokenstream application",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules",
+    "clean": "pnpm clean:dist && pnpm clean:modules",
+    "db:push": "drizzle-kit push:sqlite",
+    "db:pull": "drizzle-kit introspect:sqlite",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "Shandy Sulen",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@libsql/client": "^0.3.4",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.3",
+    "drizzle-orm": "^0.27.2",
+    "zod": "^3.22.4"
+  }
+}

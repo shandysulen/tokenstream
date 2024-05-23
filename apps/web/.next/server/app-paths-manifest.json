@@ -1,0 +1,7 @@
+{
+  "/api/trpc/[trpc]/route": "app/api/trpc/[trpc]/route.js",
+  "/page": "app/page.js",
+  "/api/siwe/session/route": "app/api/siwe/session/route.js",
+  "/api/siwe/nonce/route": "app/api/siwe/nonce/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

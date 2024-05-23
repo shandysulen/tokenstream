@@ -1,0 +1,29 @@
+{
+  "name": "@tokenstream/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "send": "tsx send.ts",
+    "emit": "tsx emit_log.ts",
+    "emit-direct": "tsx emit_direct.ts",
+    "receive": "tsx receive_log.ts",
+    "receive-direct": "tsx receive_direct.ts",
+    "consume": "tsx consume.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "amqplib": "^0.10.3",
+    "better-sse": "^0.11.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.4",
+    "@types/express": "^4.17.21"
+  }
+}
